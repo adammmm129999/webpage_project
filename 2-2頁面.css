@@ -1,0 +1,72 @@
+.accordion {
+    width: 100%; /* 設定寬度為網頁寬度 */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: linear-gradient(to right, #fdf5d5, #fceabb);
+    margin: 10px 0;
+    overflow: hidden;
+    box-sizing: border-box; /* 確保邊框不會影響寬度 */
+    
+}
+
+/* 標題部分樣式 */
+.accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-weight: bold;
+    user-select: none;
+}
+
+/* 箭頭樣式 */
+.accordion-header .arrow {
+    transition: transform 0.3s ease;
+}
+
+/* 隱藏內容部分 */
+.accordion-content {
+    display: none;
+    padding: 10px 15px;
+    border-top: 1px solid #ccc;
+    background-color: #fffbe0;
+    color: #333;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* 調整列表樣式 */
+.accordion-content ul {
+    margin: 10px 0 0 0; /* 上方與左右的距離調整 */
+    padding-left: 15px; /* 與左側標題對齊 */
+    list-style-type: disc; /* 使用預設的圓點樣式 */
+}
+
+.accordion-content li {
+    margin: 5px 0; /* 每個項目的間距 */
+    text-indent: 0; /* 確保不縮排 */
+}
+
+/* 展開時箭頭翻轉 */
+.accordion-header.active .arrow {
+    transform: rotate(180deg);
+}
+
+/* 針對網頁容器的設置 */
+body {
+    margin: 0; /* 移除預設的邊距 */
+    padding: 0;
+}
+
+.image-row {
+    display: flex;
+    justify-content: space-around; /* 圖片之間有間距 */
+    gap: 10px; /* 控制圖片間的空隙 */
+  }
+
+  .image-row img {
+    width: 250px; /* 控制圖片寬度 */
+    height: auto; /* 保持圖片比例 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 添加柔和的陰影效果 */
+  }

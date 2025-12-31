@@ -1,0 +1,227 @@
+  /* 通用樣式 */
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    background-image: url("圖片4.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+.section {
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
+.course-info, .course-outline {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    flex: 1;
+}
+
+.course-info ul, .course-outline ul {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+.course-info li, .course-outline li {
+    margin-bottom: 10px;
+}
+
+.faq-item {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 15px;
+}
+
+.faq-item h2 {
+    color: #007BFF;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.faq-item p {
+    margin: 0;
+    font-size: 16px;
+    color: #555;
+}
+
+.contact-form {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.contact-form input, .contact-form textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    padding: 10px 15px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.contact-form button:hover {
+    background-color: #0056b3;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #007BFF;
+    padding: 10px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .brand {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.navbar button:hover {
+    background-color: #0056b3;
+}
+
+/* Dropdown menu */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.switch-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.switch-buttons button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.switch-buttons button:hover {
+    background-color: #0056b3;
+}
+
+/* 表格樣式 */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #007BFF;
+    color: white;
+}
+
+.form-container {
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 20px;
+ }
+
+form {
+flex: 1;
+margin-right: 20px;
+}  
+
+.image-container img {
+width: 800px;  /* 設定圖片的寬度 */
+height: 300px;  /* 根據寬度自動調整高度 */
+}
+
+/* 預設樣式 */
+.hover-effect {
+    background-color: #f9f9f9;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+/* 滑鼠懸停時 */
+.hover-effect:hover {
+    background-color: #d1e7dd; /* 變色 */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* 增加陰影效果 */
+}

@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>阿瑋的棒球網站</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="1-2頁面.css">
+    <link rel="stylesheet" href="首頁.css">
+    <link rel="stylesheet" href="2-1頁面.css">
+    <link rel="stylesheet" href="2-2頁面.css">
+    <link rel="stylesheet" href="3-1頁面.css">
+    <link rel="stylesheet" href="3-2頁面.css">
+</head>
+<body>
+
+    <div class="navbar">
+        <h1 class="brand">阿瑋的棒球課程網站</h1>
+        <button onclick="showSection('home')">首頁</button>
+        <div class="dropdown">
+            <button>棒球基本介紹</button>
+            <div class="dropdown-content">
+                <a href="javascript:void(0)" onclick="showSection('section1a')">1-1 棒球比賽規則</a>
+                <a href="javascript:void(0)" onclick="showSection('section1b')">1-2 球場上的防守站位</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button>常見的棒球術語介紹</button>
+            <div class="dropdown-content">
+                <a href="javascript:void(0)" onclick="showSection('section2a')">2-1 打擊的術語介紹</a>
+                <a href="javascript:void(0)" onclick="showSection('section2b')">2-2 投球的術語介紹</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button>棒球戰術上的應用</button>
+            <div class="dropdown-content">
+                <a href="javascript:void(0)" onclick="showSection('section3a')">3-1 棒球場上常見的進攻戰術</a>
+                <a href="javascript:void(0)" onclick="showSection('section3b')">3-2 棒球場上常見的防守戰術</a>
+            </div>
+        </div>
+        <button onclick="location.href = 'signup.html'">報名</button>
+
+        <!-- 常見問題與聯繫表單按鈕 -->
+        <div class="dropdown">
+            <button>常見問題與聯繫表單</button>
+            <div class="dropdown-content">
+                <a href="javascript:void(0)" onclick="showSection('faq')">常見問題與聯繫表單</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div id="home" class="section active">
+            <h1>課程名稱:打擊你的熱情：棒球入門指南⚾</h1>
+
+            <!-- 課程資訊 -->
+<div class="course-info hover-effect" style="display: flex; align-items: center;">
+    <div style="flex: 1; padding-right: 20px;">
+        <h2>課程資訊</h2>
+        <p><strong>適合的學習對象：</strong>初次接觸棒球的人或對棒球有興趣的人</p>
+        <p><strong>教學目標：</strong></p>
+        <ul>
+            <li>使學習者了解棒球的基本規則與知識</li>
+            <li>培養學習者對棒球運動的興趣與鑑賞能力</li>
+        </ul>
+        <p><strong>課程模式：</strong>以理論為主，沒有實際操作的部分</p>
+        <p><strong>課程內容：</strong>圖片和影片搭配文字輔助進行說明，讓學習者可以清楚了解每個案例的情況分析</p>
+    </div>
+    <div style="flex: 1; text-align: center;">
+        <img src="圖片2.png" alt="棒球課程示意圖" style="max-width: 100%; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+    </div>
+</div>
+
+
+            <!-- 課程大綱 -->
+            <div class="course-outline">
+                <h2>課程進度與大綱</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>章節</th>
+                            <th>週次</th>
+                            <th>內容</th>
+                            <th>時間</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td rowspan="2">第一章節：棒球基本介紹</td>
+                            <td>第1週</td>
+                            <td>1-1棒球比賽規則</td>
+                            <td>15分鐘</td>
+                        </tr>
+                        <tr>
+                            <td>第2週</td>
+                            <td>1-2球場上的防守站位</td>
+                            <td>15分鐘</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">第二章節：常見的棒球術語介紹</td>
+                            <td>第3週</td>
+                            <td>2-1打擊的術語介紹</td>
+                            <td>15分鐘</td>
+                        </tr>
+                        <tr>
+                            <td>第4週</td>
+                            <td>2-2投球的術語介紹</td>
+                            <td>15分鐘</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">第三章節：棒球戰術上的應用</td>
+                            <td>第5週</td>
+                            <td>3-1棒球場上常見的進攻戰術</td>
+                            <td>40分鐘</td>
+                        </tr>
+                        <tr>
+                            <td>第6週</td>
+                            <td>3-2棒球場上常見的防守戰術</td>
+                            <td>40分鐘</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- 常見問題區域 -->
+        <div id="faq" class="section">
+            <h1>常見問題⚾</h1>
+            <div class="faq-item">
+                <h2>1. 課程適合哪些人參加？</h2>
+                <p>本課程主要適合對棒球有興趣的新手或是初學者。無需任何先前的棒球經驗，課程將從基礎開始教起。</p>
+            </div>
+            <div class="faq-item">
+                <h2>2. 課程是線上還是線下進行的？</h2>
+                <p>本課程是線上進行，您可以隨時隨地通過網絡訪問學習內容。</p>
+            </div>
+            <div class="faq-item">
+                <h2>3. 我需要購買任何設備嗎？</h2>
+                <p>不需要！本課程只需您擁有一台能夠上網的設備，課程內容會通過影片和圖片進行解釋，無需額外的設備。</p>
+            </div>
+            <div class="faq-item">
+                <h2>4. 課程結束後，我能獲得什麼證書嗎？</h2>
+                <p>是的，完成課程後，您將獲得一個結業證書，證明您對棒球的基本知識已經掌握。</p>
+            </div>
+            <div class="faq-item">
+                <h2>5. 我如何聯繫課程的教學團隊？</h2>
+                <p>您可以透過聯繫表單向我們的教學團隊提問或留言，我們將盡快回覆您。</p>
+            </div>
+            <h1>聯繫我們⚾</h1>
+            <div class="form-container">  
+                <form onsubmit="handleFormSubmit(event)">
+                    <label for="name">您的名字</label>
+                    <input type="text" id="name" name="name" required placeholder="請輸入您的名字">
+            
+                    <label for="email">電子郵件</label>
+                    <input type="email" id="email" name="email" required placeholder="請輸入您的電子郵件">
+            
+                    <label for="subject">主題</label>
+                    <input type="text" id="subject" name="subject" required placeholder="請輸入訊息主題">
+            
+                    <label for="message">留言內容</label>
+                    <textarea id="message" name="message" rows="5" required placeholder="請輸入您的留言"></textarea>
+            
+                    <button type="submit">提交</button>
+                </form>
+            
+                <div class="image-container">
+                    <img src="棒球.png" alt="插圖" />
+                </div>
+            </div>
+
+
+        </div>
+
+       
+         <!-- 棒球比賽規則 -->
+         <div id="section1a" class="section">
+            <h1> 棒球比賽的基本規則⚾</h1>
+           
+            <ul style="line-height: 50px;">
+                <li>棒球比賽會分為兩個隊別，並分別輪流交換擔任進攻方與防守方。</li>
+                <li>雙方主要是利用「球、球棒和手套」，並於扇形的棒球場裡進行來進行比賽。</li>
+                <li> 場中從投球位置起有一個由四個壘包所圍成的正方形空間，從第一個壘包逆時針跑回第一個壘包算得分。</li>
+                <li>進攻方每次由一名擊球員上場打擊，擊球員的任務是將球擊出之後，從本壘起跑，經過一壘、二壘和三壘，最終回到本壘，來獲取分數。</li>
+                <li>如果三次好球沒有打中，或者擊出的球被防守方球員在空中接到，或者在防守壘位的球員接到球之後才跑到那個壘，擊球員便被判出局。</li>
+                <li> 進攻方若有三個人出局，而雙方將進行攻守交換。</li>
+                <li>防守方的目的是阻止對方贏取分數，防守時由「九名」球員上場。</li>
+                <li>防守方的「投手」負責投球，主要是要讓進攻方的打擊者打不出球或打不出安打。</li>
+                <li>防守方的「捕手」負責接投手所投出的球、防守本壘和指揮全場。</li>
+                <li>防守方的一壘手防守一壘，二壘手防守二壘，三壘手防守三壘，游擊手則於二、三壘間機動防守。</li>
+                <li>以上8.9.10這些防守人員稱為「內野手」；而「外野手」則依防守球員負責防守的位置，可分為「左」外野手、「中」外野手和「右」外野手。</li>
+                <li>最終按雙方獲得分數的多寡來裁定勝負。</li>
+                <li>依國際慣例，正式的棒球比賽每場一共有九局，每一局又分為上半局與下半局；而少棒比賽通常進行六局比賽、青少棒通常進行七局比賽。
+                </li>
+            </ul>
+            <h1>棒球比賽有哪些人員?⚾</h1><br>
+            <img src="圖片5.png" style="height: 500px; padding-left: 20px;">
+        
+                
+         </div>
+        <!--1-2頁面-->
+         <div id="section1b" class="section">
+            <div class="container">
+            <h1>球場上的防守站位⚾</h1>
+          
+        
+            <!-- 新增防守站位區域 -->
+            <div class="defensive-positions">
+                <h2>1-2 場上的防守站位與示意圖</h2>
+                <p>在棒球場上，1-2的防守站位是指壘上有跑者一壘及二壘時，守備球員的位置分布與策略。</p>
+                <ul>
+                    <li><strong>投手 (Pitcher):</strong> 保持專注準備應對投球，同時注意跑者的動態，尤其是盜壘可能。</li>
+                    <li><strong>捕手 (Catcher):</strong> 負責接住投球並觀察壘上的跑者，隨時準備傳球阻止盜壘。</li>
+                    <li><strong>一壘手 (First Baseman):</strong> 靠近一壘基線，準備接球並觸殺跑者或進行守備佈局。</li>
+                    <li><strong>二壘手 (Second Baseman):</strong> 靠近二壘，協助覆蓋一二壘間的防區，隨時準備進行雙殺或接球。</li>
+                    <li><strong>游擊手 (Shortstop):</strong> 負責二三壘間的防守，必要時支援二壘或主動進行佈局調整。</li>
+                    <li><strong>三壘手 (Third Baseman):</strong> 保護三壘，同時注意準備進行接球及快速傳球至其他壘位。</li>
+                    <li><strong>外野手 (Outfielders):</strong> 根據內野的防守站位進行調整，覆蓋可能的高飛球或滾地球。</li>
+                </ul>
+                <p>防守站位的目的是最大化守備效率，同時減少失分的可能性，根據跑者的速度和打者的特性調整陣型尤為重要。</p>
+            </div>
+            </div>  
+            <div class="defensive-positions">
+                <h2>場上的跑動原則</h2>
+                <ul>
+                    <li>【接球】無論球打往哪裡，守備員一定先向球的方向移動，就像魚缸裡的小魚追飼料一樣。</li>
+                    <li>【拉線】球已飛出來，該是你的就去追吧！不是你的就別再留戀，趕快跑位，就像螞蟻運甜點一樣井然有序地，讓外野手、cut-off player與目標壘手連成一直線。</li>
+                    <li>【補壘包】沒得接球也無法拉線別嘆氣，趕緊找空檔補壘包！</li>
+                </ul>
+          
+               
+         </div>
+         <div id="slideshow" style="margin-top: 20px;">
+            <img src="圖片8.jpg" alt="圖片8">
+            <img src="圖片9.png" alt="圖片9">
+        </div>
+        
+
+    </div>
+
+        <div id="section2a" class="section">
+            <div class="container">
+                <h1>打擊術語</h1>
+
+                <div class="accordion">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <span>(一) 安打</span>
+                        <span class="arrow">▼</span>
+                    </div>
+                    <div class="accordion-content" >
+                        指打者把投手投出來的球擊出到界內，使打者本身能至少安全上到一壘的情形。但有兩種情形之下，不計為安打：一是因為對手球員的守備失誤才造成安全上壘。二是因為守備球員選擇試圖讓其他壘上的跑者出局，才造成打者安全上壘，這種情形稱作野手選擇。 
+                    <ul>
+                     <li>安打可依照打者本身到達的壘包，可分為一壘安打、二壘安打、三壘安打及全壘打四種。但如果因為防守方守備失誤，造成的額外進壘，則以原來不失誤的情形所應能上到的壘位來記錄。</li>
+                     <li>依安打到的位置，可分為內野安打、外野安打，其中內野安打由於球擊得不遠，多半是一壘安打，且多半是跑壘速度快的打者才容易擊出 </li>
+                     <li>另有一種稱為「德州安打」，是指打得不甚強勁的飛球，剛好掉落在內野手及外野手之間落地而形成的幸運安打，又被稱作「三不管地帶的安打」。</li>
+                     <li> 若在九局下半或延長賽下半，後攻隊伍和對方分數相同或落後，而因為安打得分使分數領先時，比賽直接結束，後攻隊伍獲勝，而最後得分的安打就稱為再見安打。</li>
+                    </ul>
+                    </div>
+                
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <span>(二) 全壘打</span>
+                        <span class="arrow">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        全壘打是一種打者可環繞所有壘包一圈的安打。除了打者跑到終點本壘時，可自力得到一分之外，所有已經在壘包上的跑者每人皆可得到一分。 
+                        <ul>
+                            <li>場內全壘打 :即使球沒有飛出全壘打牆外，基本上只要在對手沒有發生失誤的情況下，打者擊球後一舉繞完所有壘包，在野手來得及把球傳回來之前跑回本壘，
+                                就是全壘打；這稱為「場內全壘打」（inside-the-park home run），一般需要打者是個腳程快的選手，
+                                而野手要不是某種程度上對球的處理不夠正確，要不然就是球出現了不規則彈跳或因為球場的特性使得球難以處理。
+                                而這個處理錯誤不能到被記為失誤的程度，否則規則上打者是無法獲得全壘打記錄的。 </li>
+                            <li>滿壘全壘打，又稱滿貫全壘打、滿壘打、滿貫砲、大滿貫，指打者在滿壘時（一壘、二壘、三壘都有跑者）打出的全壘打，可一口氣得到4分。
+                                而場內大滿貫（inside-the-park grand slam）兼具場內全壘打和滿壘全壘打的特性，是非常罕見的情況。</li>
+                            <li>陽春全壘打（Solo Home Run），又稱「陽春砲」，是指在壘上無跑壘員之情形下，擊球員所擊出之全壘打，只有一分打點。
+                                此名稱是從陽春麵引申而來的，形容和陽春麵一樣沒有多餘的配料（只得到一分）。  </li>
+                            <li>再見全壘打（walkoff home run），是由MLB知名終結者丹尼斯·艾克斯利發明的名詞，用來指稱那些立刻結束比賽的全壘打。之所以這樣命名，是因為得了分之後，球員就可以離開（"walk off"）球場了。
+                                要直接結束比賽，必須是後攻球隊在最後一局下半打出全壘打，令比數超前，也向對手先攻球隊說「再見」。
+                                其中「終極再見滿貫全壘打」(Ultimate Walk-off Grand Slam Home Run)指的是在球隊落後3分情況下擊出的再見全壘打。 </li>
+                        </ul>
+                    </div>
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <span>(三) 打點</span>
+                        <span class="arrow">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        是指打者藉由每次打席，使壘包上的跑壘員或打者本身都跑回本壘得分。<br>
+                        其中包含球員被四壞保送或觸身球而上壘、打出高飛犧牲打使壘上跑者得分。
+                        <ul>
+                        <li>但以下情形並不計打點：
+                        假如球員打出雙殺打而得分、因守備失誤（妨礙例外）而得分、投手暴投或捕手捕逸而得分、或者因投手犯規而得分；則不計打點。</li>
+                        </ul>
+                    </div>
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <span>(四) 野手選擇</span>
+                        <span class="arrow">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        野手選擇，簡稱野選、FC（Fielder's Choice），
+                        指棒球比賽中，打者（擊球跑壘員）因為守備員（野手）選擇將球傳至一壘之外的其他壘包而上壘，不算安打，紀錄上記為「野手選擇」。
+                        <ul>
+                            <li>
+                                一般最常見的狀況是：打者擊出內野滾地球，原本打者可能出局，但因守備員（野手）試圖要使壘上其他跑者出局，
+                                無論守備員的企圖是否成功，只要沒有出現失誤而打者又能夠安全上壘，野手選擇就成立。
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <span>(五) 高飛犧牲打</span>
+                        <span class="arrow">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        是指打擊手在無人出局或一人出局的情形下，擊出高飛球被接殺之後，
+                        在不是因為對方野手失誤的情形下，使壘上的跑壘員回到本壘得分的情形 
+                        <ul>
+                            <li>高飛犧牲打大都是具有一定距離以上的外野高飛球，才能使壘上的跑者(絕大多數是三壘)有足夠時間回到本壘得分。
+                                假如一個原本應該能形成的高飛犧牲打的外野高飛球，因為對方野手的失誤漏接，則仍然視為一個高飛犧牲打。
+                                此外界外高飛球被接殺之後，壘上的跑者亦可以開始起跑，因此界外高飛球也有成為高飛犧牲打的可能性。</li>
+                        </ul>
+                    </div>
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <span>(六) 犧牲觸擊</span>
+                        <span class="arrow">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        無人或一人出局壘上有人時，打者以觸擊方式讓自己出局、護送跑者推進到下一個壘位。
+                        但一人出局後仍執行犧牲觸擊的機率較低，因為只剩下一個出局數可以運用。<br><br>
+                        另一種犧牲打是無人或一人出局三壘有人，投手啟動投球動作的同時三壘跑者往本壘起跑，打者以觸擊的方式將球點進界內，
+                        讓跑者順利回本壘得分，此種觸擊又稱為「強迫取分」。<br><br>
+                        下列2種情況雖然打者也上壘，紀錄上仍記為犧牲觸擊：
+                        <li>因為防守方守備失誤使得打者也上壘。</li>
+                        <li>因為防守方選擇封殺或觸殺任一跑者失敗，使得打者也上壘。</li>
+                        如果打者執行犧牲觸擊讓壘上跑者出局而自己上壘時，
+                        不管是不是最前位的跑者出局，一律記為野手選擇<br><br>
+                        如果打者執行犧牲觸擊在防守方沒有守備失誤的情況下而上壘時，
+                        則記為內野安打。
+
+
+                    </div>
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <span>(七) 勝利打點</span>
+                        <span class="arrow">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        勝利打點是棒球術語，指的是使球隊獲勝的那一分打點，
+                        一般而言，會指擊出勝利打點的打者，
+                        不過因為球隊獲勝不一定都是勝利打點所致，所以不是每場比賽都有勝利打點，例如投手投出暴投或失誤導致失分而最後輸球，則該場比賽就沒有勝利打點。 
+                    </div>
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <span>(八) 得點圈</span>
+                        <span class="arrow">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        得點圈（Scoring position），是二壘和三壘的總稱。
+                        在棒球比賽中，通常以一壘安打即可送回壘上跑壘員回到本壘得分的一個範圍。
+                        而因為比賽進行中跑壘員可以提前離壘的規則，二壘跑壘者可更接近本壘，再加上本壘距離外野手最遠，常常藉由一壘安打即可回本壘得分，故二壘及三壘合稱得分圈。
+                    </div>
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <span>(九) 完全打擊</span>
+                        <span class="arrow">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        完全打擊（英文：hit for the cycle）是一個棒球的術語，
+                        指的就是同一位打者在同一場比賽中，不分順序擊出了一壘安打、二壘安打、三壘安打和全壘打。<br><br>
+                        完全打擊跟投手的完全比賽一樣是一個難得的紀錄，因為在一場比賽中，平均一位打者只有3到5次的打擊機會，
+                        所以打者幾乎每次都要擊出安打，而且又必須是四種不同的安打，
+                        這就是製造完全打擊的困難之處，其中又以三壘安打最難出現。 
+                    </div>
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <span>(十) 猛打賞</span>
+                        <span class="arrow">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        是個棒球術語，指一位打擊者在比賽中擊出三支以上的安打。<br><br>
+                        由於一場棒球比賽中，一位先發上場的打擊者大概只能夠有三到五次的打擊機會，而從一般打者的平均打擊率（約兩成五到三成）看來，
+                        平均只能打出一兩支安打。因此，在棒球賽中擊出三支安打以上，實屬不易。
+
+                    </div>             
+                </div>
+   
+            </div>
+            <div style="text-align: center;"> 
+                <img src="打棒球.gif" width="1100px " height="600px"  >
+            </div>
+           
+
+        </div>
+
+
+            <div id="section2b" class="section">
+                    <div class="container">
+                        <h1>投球術語</h1>
+        
+                        <div class="accordion">
+                            <div class="accordion-header" onclick="toggleAccordion(this)">
+                                <span>(一) 勝利投手</span>
+                                <span class="arrow">▼</span>
+                            </div>
+                            <div class="accordion-content">
+                                勝利投手，簡稱勝投，區分為先發勝以及後援勝，
+                                是一種棒球術語，獲勝的一方最後取得領先時獲勝方在場上的那位投手獲得勝投，
+                                而投手獲得勝投所累積的勝投數、是其重要的統計數據之一。
+                            <ul>
+                             <li>先發勝：</li>
+                             在正規九局的比賽先發投手必須投滿五局、下場時球隊領先、領先保持到終場就記一次勝投；
+                             未投滿五局則無關勝敗。（若比賽只有七局，那至少投滿四局。世界棒球經典賽的規定則是三局）
+                             <li>後援勝： </li>
+                             1.先發投手未能投滿五局、下場時球隊領先、
+                             領先保持到終場，那麼勝投將給予救援投手中失分最少或是沒有失分的一位。<br>
+                             2.先發投手退場時球隊處於平手或落後，救援投手在投球期間若球隊反超前領先，則勝投給予該位救援投手。
+                            </div>
+                        
+                            <div class="accordion-header" onclick="toggleAccordion(this)">
+                                <span>(二) 敗戰投手</span>
+                                <span class="arrow">▼</span>
+                            </div>
+                            <div class="accordion-content">
+                                上場投球時分數領先對手或是平手，之後被追平或是被逆轉使得隊伍輸球時就成為敗戰投手。
+                                但是登板時若是壘上還有跑者，因為該跑者的得分使得比賽輸球時，敗戰投手則為使該跑者上壘的投手。  
+                               再見滿貫全壘打」(Ultimate Walk-off Grand Slam Home Run)指的是在球隊落後3分情況下擊出的再見全壘打。 </li>
+                                
+                            </div>
+                            <div class="accordion-header" onclick="toggleAccordion(this)">
+                                <span>(三) 暴投</span>
+                                <span class="arrow">▼</span>
+                            </div>
+                            <div class="accordion-content">
+                        
+                                <ul>
+                                <li>指的是比賽中投手所投出的球太高、太低、或離本壘板太遠，
+                                    使得捕手於正常蹲捕時無法接住球，也讓壘上的跑者進壘，甚至得分。</li>
+                                <li>暴投的球通常會通過捕手，跑到本壘板後方，以致於跑者可以輕易地進壘。至於打者的話，
+                                    則視有無出棒來紀錄為好球或是壞球，如果該球為第三個好球，則打者亦可以進壘。</li>
+                                <li>另一個跟暴投相關的數據是捕逸（Passed Ball，通常記為PB）。
+                                    捕逸和暴投指的其實是同一個情況：捕手未能確實接捕投手所投出的球。
+                                    如果認定該球捕手應可以接捕而未能接捕，就紀錄為捕逸。
+                                    相較於暴投在多數情況多為壞球(打者未出棒時)，捕逸存在有捕手未確實接住在好球帶內的球之可能。</li>
+                                <li>暴投或捕逸的紀錄是以跑者是否進壘而定，故壘上無人時原則無此紀錄 </li>
+                                <li>負責判斷暴投或捕逸的是官方紀錄員。如果不確定的話，
+                                    通常會給予有利於捕手的判定。也就是說大多數的情況都會紀錄為暴投。</li>
+                                <li>暴投在紀錄上不算是失誤；因為暴投所失去的分數在紀錄上算是投手的自責分。</li>
+                                <li>捕逸在紀錄上亦不算是失誤；但捕逸所失去的分數在紀錄上不算是投手的自責分。</li>
+                                </ul>
+                            </div>
+                            <div class="accordion-header" onclick="toggleAccordion(this)">
+                                <span>(四) 自責分</span>
+                                <span class="arrow">▼</span>
+                            </div>
+                            <div class="accordion-content">
+                                自責分（英語：Earned Run，通常記為ER），又稱責失分、責任失分，
+                                在棒球統計裡指的是對方的得分當中，
+                                因為投手的投球所造成的部份（也就是扣除因為失誤或是捕逸所造成的失分，但暴投失分會被計算在內）。
+                                如果不純粹是投手投球的錯，就稱為非自責分（Unearned Run）。縱使發生失誤的是投手自己，也不算是投手的自責分（當然，這個失誤會紀錄在投手的守備數據中） 
+                               
+                            </div>
+                            <div class="accordion-header" onclick="toggleAccordion(this)">
+                                <span>(五) 中繼成功</span>
+                                <span class="arrow">▼</span>
+                            </div>
+                            <div class="accordion-content">
+                                中繼成功（英語：Hold，通常紀錄為HLD或H），為棒球術語，
+                                是一項用來衡量中繼投手優劣的統計數據。當中繼投手在符合救援情境時登場，
+                                至少讓一名擊球員或跑壘員出局，下場時球隊仍然領先，
+                                而且所遺留的跑壘員（責任失分）不會讓球隊被追平或落後，即可獲得一次中繼成功的紀錄。
+                                符合條件的中繼投手指的是除了第一任（先發投手）以及最後一任（終結者）以外的投手。 
+                               
+                            </div>
+                            <div class="accordion-header" onclick="toggleAccordion(this)">
+                                <span>(六) 救援成功</span>
+                                <span class="arrow">▼</span>
+                            </div>
+                            <div class="accordion-content">
+                                球隊贏球的最後一任投手（必須為非勝投）
+                                ，至少投0.1局，同時符合下列3要件其中之一，就可拿到救援成功（SV）：<br><br>
+                                <li>1.為投手登板時，球隊領先3分以內，完成1局投球。</li>
+                                <li>2.為投手登板時，1人在壘領先3分以內、2人在壘領先4分以內、滿壘領先5分以內時，
+                                    即使接下來面對2位打者都被轟全壘打遭追平或逆轉，均能拿下救援成功。</li>
+                                <li>3.為投手登板時，無論領先多少分，至少投滿3局。</li>
+        
+        
+                            </div>
+                            <div class="accordion-header" onclick="toggleAccordion(this)">
+                                <span>(七) 救援失敗</span>
+                                <span class="arrow">▼</span>
+                            </div>
+                            <div class="accordion-content">
+                                投手在符合救援情境下登場，但是他讓球隊被追平分數，就會被紀錄一次救援失敗。
+                                
+                            </div>
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            <span>(八) 好球</span>
+                            <span class="arrow">▼</span>
+                        </div>
+                        <div class="accordion-content">
+                            <ul>
+                                <li>好球的意思是指比賽時投手的投球未落地直接經過好球帶，
+                                    或者打者出棒但未打到球或是打成界外球。</li>
+                                <li>好球帶是指本壘板上方，高度在打者的肩膀與腰部的中間線到膝部以上的範圍。這個範圍是一般公認的好球帶
+                                    ，但並不固定或精準嚴格，好球帶會因為球賽舉辦單位的規定、
+                                    本壘板的大小、以及主審對於好球帶的主觀認定不同而由所改變。</li>
+                                <li>以下情況皆會被判好球:</li>
+                                1.任何擊球手嘗試揮棒但未成功擊中的球，或者在裁判判斷下穿過好球區的球，都會被判定為好球；<br>
+                                2.擊球員擊出界外球時亦被記為好球（然而在兩好球的情況下，繼續擊出非觸擊短打的界外球則不增加好球數）；
+                                兩好球後觸擊短打造成的界外球，視為第三好球，打者三振出局，且屬比賽停止球，壘上跑者不得進壘；<br>
+                                3.投手投出的球打中擊球員的球棒後，並被捕手合法接捕，則會被判好球，亦稱擦棒被捕
+                                
+                            </ul>
+                        </div>
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            <span>(九) 壞球</span>
+                            <span class="arrow">▼</span>
+                        </div>
+                        <div class="accordion-content">
+                            投手投出的球且擊球手沒有揮棒，並且在裁判的判斷下沒有穿過好球區，裁判就會判定為壞球 。 
+                        </div>
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            <span>(十) 三振</span>
+                            <span class="arrow">▼</span>
+                        </div>
+                        <div class="accordion-content">
+                            三振（英語：Strikeout），是棒球比賽中，打擊者經裁判判定獲得三個好球後，
+                            記一出局。三振亦為投手之統計數據。打者被判定三振出局之同時，當時投球之投手即可獲計一次奪三振。 
+                            <ul>
+                                <li>當第三顆好球未被捕手直接接到（包括碰到地面後被捕手接到）時，若一壘上無跑壘員，
+                                    或者一壘有跑壘員但出局數為2的情況下，
+                                    此時擊球員雖被記為一次三振但是可以化身為跑壘員向一壘移動。這種情況被稱為不死三振。
+                                    若無人出局或一人出局且一壘有跑者，則仍為一般的三振，打者出局。
+                                    這個規定是為了保護攻擊方，避免捕手故意漏接而傳二壘再傳一壘形成雙殺守備</li>
+                                <li>三振發生時多半為活球（比賽進行中），所以如果三振發生的同時捕手未能接捕投手的球（包括捕逸、暴投，甚至球卡在球衣或護具裡面拿不出來），
+                                    跑者無論是否為被迫進壘，均可視狀況冒險進壘。打者除了不死三振不成立的情境之外，
+                                    均得往一壘跑並得再冒險進壘。但如果是兩好球之後觸擊失敗的三振，
+                                    或是球擊中打者但是打者被判定出棒造成的三振，則為死球，打者出局的同時壘上跑者不得進壘。</li>
+                                <li>不死三振（英語：Uncaught third strike，或dropped third strike、non-caught third strike）是棒球的術語，比賽紀錄上是記作「暴投和野手失誤」或「捕逸和野手失誤」。
+                                    指投手投出第三個好球數後，若捕手未能接捕投手投出的球，則打者可試圖往一壘跑，
+                                    若能在捕手傳球至一壘前安全上壘，則雖然紀錄上仍計一次三振，但打者上壘且不增加出局數，這種情形稱作不死三振。</li>
+
+                            </ul>
+                        </div>             
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            <span>(十一) 保送</span>
+                            <span class="arrow">▼</span>
+                        </div>
+                        <div class="accordion-content">
+                           <ul>
+                            <li>保送（英語：base on balls）縮寫為BB，是棒球術語。是屬於保送讓擊球員（打者）上壘的通稱。
+                                包括四壞球（保送一壘）、觸身球（保送一壘）和妨礙打擊（保送一壘） </li>
+                            <li>擊球員獲得四壞球、故意四壞球（敬遠球或保送戰術），或是投手所投出的球擊中擊球員形成觸身球（Hit by Pitch），
+                                擊球員可以直接上到一壘的情形。其中「捕手妨礙打擊」（Catcher Interference, CI），當投手在投球過程中，
+                                打者被對方捕手或者其他野手以任何形式干擾打擊，
+                                此時形成比賽停止球，打者直接上一壘。最常見的捕手干擾打擊，就是打者在揮棒過程中，碰觸到捕手手套的前緣。</li>
+                            <li>四壞球 :擊球員於打擊中獲得四個壞球數，准進一壘之判決。 四壞球在規則上屬活球（比賽進行中），所以當打者獲得四壞球的同時發生暴投、捕逸或投手犯規時，
+                                無論跑者是否處於被迫進壘狀態，均可持續進壘。</li>
+                            <li>故意四壞球 :故意四壞球俗稱敬遠。在棒球比賽中，投手與捕手因為戰術運用考量，
+                                故意投出誇張不可能揮擊到的球保送打擊能力較強的擊球員上壘，製造讓下一棒的擊球員打出雙殺打的可能性，進而形成雙殺。</li>
+                            <li>觸身球 :投手的投球在擊球員未揮棒狀態下，且身體未在好球帶中，擊中擊球員時，稱為觸身球，
+                                被擊中的擊球員則可以獲得保送上至一壘，屬於比賽停止球狀態。</li>
+                                1.所謂的擊中是只要擊中打者身體或任何穿戴的裝備就算，所以球即使只稍微削到球衣或是打擊頭盔，仍為觸身球。<br>
+                                2.如果球先落地在未先打中捕手、主審及任何障礙物的情況下反彈擊中站在打擊區的打者，仍為觸身球。<br>
+                                3.如果主審主觀認為打者沒有閃躲的動作，則可只宣告為一壞球而不宣告為觸身球。<br>
+                                4.如果打者身體被擊中但球棒有打中球彈至界外，則比照一般界外球宣告為界外球。<br>
+                                5.如果打者身體被擊中但是被裁判判定為出棒，則宣告為一好球而不是觸身球，如果打者前面已經2好球，則打者遭三振出局，且因為是比賽停止球，壘上跑者不得進壘。
+
+                           </ul>
+    
+                        </div>         
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            <span>(十二) 牽制</span>
+                            <span class="arrow">▼</span>
+                        </div>
+                        <div class="accordion-content">
+                            牽制（英語：Pickoff）指的是棒球比賽中，投手在活球狀態下將球傳向野手，
+                            以試圖將提前離壘的跑壘員觸殺的動作。一般來說被投手牽制過以後，
+                            跑壘員的離壘距離都會有所減小。
+                            <ul>
+                                <li>做牽制的目的有以下幾種：</li>
+                                1.最明顯的目的是防止跑壘員盜壘或者嘗試將心不在焉的跑壘員殺出局，投手常傳球封殺一壘以迫使跑壘員跑向二壘，此時野手可簡單的通過傳球觸殺跑壘員，造成盜壘失敗。<br>
+                                2.另一個原因是試圖打消快速跑壘員的盜壘企圖，如果有速度很快的跑壘員在壘上並且離壘很遠，投手常常會進行數次牽制以使跑壘員離壘距離縮小，牽制很多次以後跑壘員可能會離壘很近或者投手可能會沒有耐心。<br>
+                                3.最後一個原因是通過反覆牽制嘗試破壞進攻方原來所制定的戰術，常見的情況是當打者擺出短打姿勢試圖做一個短打時，投手通過幾次牽制使打者放棄短打戰術。<br>
+                            </ul>
+    
+                        </div>  
+                    </div>    
+                </div>  
+                <div class="image-row">
+                    <img src="出局.gif" >
+                    <img src="全壘打.gif" >
+                    <img src="加油.gif" >
+                    <img src="投球.gif" >
+                  </div>
+
+            </div>
+
+            <div id="section3a" class="section">
+                <div class="container">
+                    <h1>短打戰術</h1>
+                    <!-- 主內容區 -->
+    <div class="content-section">
+        <!-- 影片區 -->
+        <div class="video-container">
+            <video id="videoPlayer1" 
+                src="犧牲短打.mp4" 
+                controls>
+            </video>
+        </div>
+        <!-- 描述區 -->
+        <div class="description">
+            <h3 id="playButton1" class="hover-effect">Case 1: 犧牲觸擊</h3>
+            <p>
+                無人或一人出壘上有人時，打者以觸擊方式讓自己出局，讓跑者推進到下一個壘位。
+            </p>
+        </div>
+    </div>
+
+    <!-- 主內容區 -->
+    <div class="content-section">
+        <!-- 影片區 -->
+        <div class="video-container">
+            <video id="videoPlayer2" 
+                src="強迫取分.mp4" 
+                controls>
+            </video>
+        </div>
+        <!-- 描述區 -->
+        <div class="description">
+            <h3 id="playButton2" class="hover-effect">Case 2: 強迫取分</h3>
+            <p>
+                強迫取分戰術，就是在三壘有人情況下，壘上跑者在投手投球時提前起跑，打者則以短打方式助三壘跑者回到本壘得分 
+
+            </p>
+        </div>
+    </div>
+    
+    <div class="content-section">
+        <!-- 影片區 -->
+        <div class="video-container">
+            <video id="videoPlayer3" 
+                src="突襲短打.mp4" 
+                controls>
+            </video>
+        </div>
+        <!-- 描述區 -->
+        <div class="description">
+            <h3 id="playButton3" class="hover-effect">Case 3: 突襲短打</h3>
+            <p>
+                俗稱偷點，是指出乎意料之外的觸擊，擊球員原本是要使用正常的方式打擊，在投手將球投出的瞬間改用觸擊，讓內野守備球員來不及趨前防守，藉此獲得上壘機會或得分。
+            </p>
+        </div>
+    </div>
+
+                    <h1>盜壘戰術</h1>
+                    <div class="content-section">
+                        <!-- 影片區 -->
+                        <div class="video-container">
+                            <video id="videoPlayer4" 
+                                src="盜壘.mp4" 
+                                controls>
+                            </video>
+                        </div>
+                        <!-- 描述區 -->
+                        <div class="description">
+                            <h3 id="playButton4" class="hover-effect">Case 1: 純盜壘</h3>
+                            <p>
+                                盜壘指跑壘員在投手投球時提前離開原壘包成功占領前方壘包的行為，在統計中盜壘通常被計為SB（Stolen Base） 
+                            </p>
+                        </div>
+                    </div>
+                
+                    <div class="content-section">
+                        <!-- 影片區 -->
+                        <div class="video-container">
+                            <video id="videoPlayer5" 
+                                src="雙盜壘.mp4" 
+                                controls>
+                            </video>
+                        </div>
+                        <!-- 描述區 -->
+                        <div class="description">
+                            <h3 id="playButton5" class="hover-effect">Case 2: 雙盜壘</h3>
+                            <p>
+                                雙盜壘是指當兩個壘包都有跑者時，同時開始盜壘，如此一來捕手在一個時間只能夠阻殺一個跑者。如果捕手遲疑一下就會造成兩名跑者皆盜壘成功。
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <h1>打跑戰術</h1>
+                    <div class="content-section">
+                        <!-- 影片區 -->
+                        <div class="video-container">
+                            <video id="videoPlayer6" 
+                                src="打跑戰術.mp4" 
+                                controls>
+                            </video>
+                        </div>
+                        <!-- 描述區 -->
+                        <div class="description">
+                            <h3 id="playButton6" class="hover-effect">Case 1: 打跑戰術</h3>
+                            <p>
+                                為壘上跑者提前起跑，打者不論好壞球都配合揮棒擊球，可達到推進效果，或是擾亂對方守備，算是一種積極推進的戰術。
+                                一般打者多會故意將球往地上打 ，幫隊友製造推進的效果。
+                            </p>
+                            <h3 id="playButton3" class="hover-effect">打跑與跑打的差異:</h3>
+                            <p>簡單來說，執行打跑戰術的情況下，跑者提前起跑的同時，打者也一定要碰到球。
+                                而跑打戰術的執行，則是跑者提前起跑的同時，打者不一定要出棒攻擊，打者可挑自己喜歡的好球進行攻擊。</p>
+                        </div>
+                    </div>
+
+    
+                    
+
+                </div>  
+            </div>    
+            <div id="section3b" class="section">
+                <div class="container">
+                    <h1>牽制</h1>
+                    <p style="text-align: center;">什麼是牽制:投手或捕手在活球狀態下將球傳向野手，以試圖將提前離壘的跑壘員觸殺的動作 </p>
+    
+                       <!-- 主內容區 -->
+    <div class="content-section">
+        <!-- 影片區 -->
+        <div class="video-container">
+            <video id="videoPlayer7" 
+                src="牽制一壘.mp4" 
+                controls>
+            </video>
+        </div>
+        <!-- 描述區 -->
+        <div class="description">
+            <h3 id="playButton7" class="hover-effect">Case 1: 牽制一壘</h3>
+           
+        </div>
+    </div>
+
+    <!-- 主內容區 -->
+    <div class="content-section">
+        <!-- 影片區 -->
+        <div class="video-container">
+            <video id="videoPlayer8" 
+                src="牽制二壘.mp4" 
+                controls>
+            </video>
+        </div>
+        <!-- 描述區 -->
+        <div class="description">
+            <h3 id="playButton8" class="hover-effect">Case 2: 牽制二壘</h3>
+            
+        
+        </div>
+    </div>
+    
+    <div class="content-section">
+        <!-- 影片區 -->
+        <div class="video-container">
+            <video id="videoPlayer9" 
+                src="牽制三壘.mp4" 
+                controls>
+            </video>
+        </div>
+        <!-- 描述區 -->
+        <div class="description">
+            <h3 id="playButton9" class="hover-effect">Case 3: 牽制三壘</h3>
+         
+        </div>
+      
+    </div>
+   
+    <h1>(二)pitch out戰術</h1>
+    <div class="content-section">
+        <!-- 影片區 -->
+        <div class="video-container">
+            <video id="videoPlayer10" 
+                src="pitch out.mp4" 
+                controls>
+            </video>
+        </div>
+        <!-- 描述區 -->
+        <div class="description">
+            <h3 id="playButton10" class="hover-effect">何謂pitch out:</h3>
+            <p>投手故意將球投到捕手外側，測試跑壘者動機，為了防止壘上跑壘員盜壘或執行打帶跑或跑打戰術時，捕手藉此增加傳球機會。<br> 
+                <li>特例:利用pitch out破解對方強迫取分的戰術</li>
+            </p>
+         
+        </div>
+    </div>
+    <h1>(三)趨前防守<br><p style="text-align: left;">趨前防守的目的:通常是為了擋下壘包上關鍵的一分，但是這種守備模式是一種賭注，這樣的策略有好有壞，
+        當打者擊出滾地球，內野手如果真的接下來，確實比較容易阻止三壘跑者回本壘得分，但因為趨前會讓野手的反應時間變少，使得滾地球形成安打的機率也提高很多</p></h1>
+    <div class="content-section">
+        <!-- 影片區 -->
+        <div class="video-container">
+            <video id="videoPlayer11" 
+                src="抓本壘跑者.mp4" 
+                controls>
+            </video>
+        </div>
+        <!-- 描述區 -->
+        <div class="description">
+            <h3 id="playButton11" class="hover-effect">case1:抓本壘跑者</h3>
+            <p>分析:守備方在剩下不多的進攻機會的情況下，勢必不想再失分，面對二三壘有人的局面，採用趨前防守的策略，想辦法攔阻三壘上這一分。</p>
+         
+        </div>
+    </div>
+    <div class="content-section">
+        <!-- 影片區 -->
+        <div class="video-container">
+            <video id="videoPlayer12" 
+                src="抓三壘跑者.mp4" 
+                controls>
+            </video>
+        </div>
+        <!-- 描述區 -->
+        <div class="description">
+            <h3 id="playButton12" class="hover-effect">case2:抓三壘跑者</h3>
+            <p>分析:攻擊方落後兩分的情況下，在一二壘有人的局面，採用犧牲觸擊的機率極高。
+                守備方為了防止二壘上的跑者推進到三壘，採用趨前防守的策略，目標是凍結對方壘上的跑者使其無法推進成功。</p>
+         
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+              
+        </div>
+    </div>
+
+        </div>
+    
+            </div>    
+
+
+    
+
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => section.classList.remove('active'));
+
+            const sectionToShow = document.getElementById(sectionId);
+            if (sectionToShow) {
+                sectionToShow.classList.add('active');
+            }
+        }
+
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            alert('感謝您的留言，我們會盡快回覆您！');
+        }
+        
+        let currentIndex = 0;
+            const images = document.querySelectorAll('#slideshow img');
+
+        function showNextImage() {
+        // 移除當前圖片的 "active" 類別
+            images[currentIndex].classList.remove('active');
+
+     // 計算下一張圖片的索引
+            currentIndex = (currentIndex + 1) % images.length;
+
+        // 添加 "active" 類別到新的圖片
+            images[currentIndex].classList.add('active');
+        }
+
+        // 初始化第一張圖片為可見
+            images[currentIndex].classList.add('active');
+
+        // 每 3 秒切換一次圖片
+        setInterval(showNextImage, 3000);
+
+        document.addEventListener("DOMContentLoaded", () => {
+  const headers = document.querySelectorAll(".accordion-header");
+
+  
+  headers.forEach((header) => {
+    const content = header.nextElementSibling;
+    if (content) {
+      content.style.display = "none"; // 確保內容隱藏
+      header.classList.remove("active");
+      header.querySelector(".arrow").textContent = "▼";
+    }
+  });
+});
+
+function toggleAccordion(element)
+ {
+  const header = element;
+  const content = header.nextElementSibling;
+
+  // 切換內容顯示/隱藏
+  if (content.style.display === "block") {
+    content.style.display = "none";
+    header.classList.remove("active");
+    header.querySelector(".arrow").textContent = "▼";
+  } else {
+    content.style.display = "block";
+    header.classList.add("active");
+    header.querySelector(".arrow").textContent = "▲";
+  }
+ }
+        document.addEventListener("DOMContentLoaded", () => {
+            // 點擊標題時播放或暫停影片
+            for (let i = 1; i <= 12; i++) {
+                const playButton = document.getElementById("playButton" + i);
+                const videoPlayer = document.getElementById("videoPlayer" + i);
+
+                playButton.addEventListener("click", () => {
+                    if (videoPlayer.paused) {
+                        videoPlayer.play(); // 播放影片
+                    } else {
+                        videoPlayer.pause(); // 暫停影片
+                    }
+                });
+            }
+        });
+
+
+
+    
+    </script>
+
+</body>
+</html>

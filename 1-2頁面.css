@@ -1,0 +1,54 @@
+.defensive-positions {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.defensive-positions h2 {
+    color: #2d6a4f; /* 草地綠色 */
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.defensive-positions p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.defensive-positions ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.defensive-positions li {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 10px;
+}
+
+.defensive-positions li strong {
+    color: #007BFF; /* 深藍色 */
+}
+#slideshow {
+    position: relative;
+    width: 100%; /* 根據你的圖片大小調整 */
+    height: 600px; /* 根據你的圖片大小調整 */
+    overflow: hidden;
+}
+
+#slideshow img {
+    position: absolute;
+    width: 1200px;
+    height: 600px;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+#slideshow img.active {
+    opacity: 1;
+}

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>報名頁面</title>
+    <style>
+        /* 基本樣式設定 */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 報名表單容器 */
+        .signup-form {
+            position: relative;
+            margin: 50px auto;
+            background-color: #ffffff;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            width: 300px;
+            border: 2px solid #4caf50; /* 綠色邊框 */
+        }
+
+        .signup-form h2 {
+            text-align: center;
+            color: #4caf50; /* 標題使用綠色 */
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        /* 表單字段 */
+        .signup-form input,
+        .signup-form select,
+        .signup-form button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        /* 輸入框和選擇框的焦點效果 */
+        .signup-form input:focus,
+        .signup-form select:focus {
+            border-color: #4caf50; /* 綠色邊框 */
+        }
+
+        /* 提交按鈕 */
+        .signup-form button {
+            background-color: #4caf50; /* 綠色背景 */
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .signup-form button:hover {
+            background-color: #45a049; /* 深綠色 */
+        }
+
+        /* 進度條樣式 */
+        .progress-container {
+            width: 100%;
+            background-color: #f3f3f3;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        .progress-bar {
+            height: 20px;
+            width: 0%;
+            background-color: #4caf50; /* 綠色進度條 */
+            text-align: center;
+            color: white;
+            border-radius: 5px;
+        }
+
+        /* 進度條完成後顯示文字 */
+        .progress-bar::after {
+            content: attr(data-progress);
+            display: block;
+            line-height: 20px;
+            font-size: 14px;
+        }
+
+        /* 表單字段標籤 */
+        label {
+            font-size: 16px;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        /* 回首頁按鈕 */
+        .back-home-btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #f44336; /* 紅色背景 */
+            color: white;
+            text-align: center;
+            border: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .back-home-btn:hover {
+            background-color: #d32f2f; /* 深紅色 */
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="signup-form">
+        <h2>報名參加課程</h2>
+        <form id="form">
+            <label for="name">姓名</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">電子郵件</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">電話</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="course">選擇課程</label>
+            <select id="course" name="course" required>
+                <option value="初學者課程">初學者課程</option>
+                <option value="進階技巧課程">進階技巧課程</option>
+                <option value="青少年比賽訓練課程">青少年比賽訓練課程</option>
+            </select>
+
+            <button type="submit">提交報名</button>
+        </form>
+
+         <!-- 回首頁按鈕 -->
+         <button class="back-home-btn" onclick="window.location.href='final.html'">回首頁</button>
+        
+        
+        <!-- 進度條 -->
+        <div class="progress-container">
+            <div id="progressBar" class="progress-bar" data-progress="0%"></div>
+        </div>
+
+       
+    </div>
+
+    <script>
+        document.getElementById('form').addEventListener('submit', function(e) {
+            e.preventDefault(); // 防止表單重新加載頁面
+
+            // 顯示進度條
+            let progress = 0;
+            const progressBar = document.getElementById('progressBar');
+            const interval = setInterval(function() {
+                if (progress >= 100) {
+                    clearInterval(interval);
+
+                    // 當進度條完成後顯示報名資料
+                    const name = document.getElementById('name').value;
+                    const email = document.getElementById('email').value;
+                    const phone = document.getElementById('phone').value;
+                    const course = document.getElementById('course').value;
+
+                    // 顯示報名資料
+                    alert(`報名成功！\n\n姓名: ${name}\n電子郵件: ${email}\n電話: ${phone}\n選擇課程: ${course}`);
+
+                    // 報名完成後回到首頁
+                    window.location.href = 'index.html';  // 假設首頁是 final.html
+                } else {
+                    progress += 10;
+                    progressBar.style.width = progress + '%';
+                    progressBar.setAttribute('data-progress', progress + '%');
+                }
+            }, 200);
+        });
+    </script>
+
+</body>
+</html>
